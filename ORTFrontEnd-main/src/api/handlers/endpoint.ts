@@ -1,0 +1,28 @@
+const apiEndPoint = {
+  users: "/users/signup",
+  parentSignUp: "/users/parentSignUp",
+  learnerSignUp: "/users/learnerSignUp",
+  userById: (id: any) => `/users/${id}`,
+  login: "/users/signin",
+  resetPassword: "/users/resetPassword",
+  sendMailforResetPassword: "/users/sendMailforResetPassword",
+  forgetpassword: "/users/",
+  verifyEmail: "/users/verifyMail",
+  createAdmin: "/users/createAdmin",
+  createTeacher: "/users/createTeacher",
+  getAllAdmins: "/users/getAllAdmins",
+  getAllTeachers: "/users/getAllTeachers",
+  getAllStudents: "/users/getAllStudents",
+  updateAdmin: (adminId: any) => `/users/updateAdmin/${adminId}`,
+  updateTeacher: (teacherId: any) => `/users/updateTeacher/${teacherId}`,
+  deleteAdmin: (adminId: any) => `/users/deleteAdmin/${adminId}`,
+  deleteTeacher: (teacherId: any) => `/users/deleteTeacher/${teacherId}`,
+  createPaymentModel: "/paymentModels",
+  updatePaymentModel: (id: any) => `/paymentModels/${id}`,
+  getPaymentModels: "/paymentModels",
+  getGrades: "/grades/",
+  payment: "/payments/",
+  getTestList:'/tests?dataType',
+  getTestDetails:'/tests'
+};
+export default apiEndPoint;

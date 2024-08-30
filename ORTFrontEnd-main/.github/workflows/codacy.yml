@@ -1,0 +1,37 @@
+name: Codacy Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  codacy:
+    name: Run Codacy Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "14" # Specify the Node.js version to use
+
+      - name: Install dependencies
+        run: npm install
+
+      # - name: Run tests
+      #   run: npm run test
+
+      # - name: Install Codacy Reporter
+      #   run: npm install -g codacy-coverage
+
+      # - name: Upload coverage to Codacy
+      #   run: |
+      #     codacy-coverage <coverage-report-file> --token ${{'73fa53fb72c1488fb80b47a78c0c3511' }}
+      #   env:
+      #     CODACY_PROJECT_TOKEN: ${{ '73fa53fb72c1488fb80b47a78c0c3511' }}

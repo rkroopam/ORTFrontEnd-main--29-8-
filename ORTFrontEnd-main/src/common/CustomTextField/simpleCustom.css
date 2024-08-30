@@ -1,0 +1,30 @@
+.custom-text-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.custom-text-field label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.custom-text-field input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e6e6e6;
+}
+
+.custom-text-field input.error {
+  border-color: red;
+}
+
+.custom-text-field .helper-text {
+  margin-top: 0.5rem;
+  color: red;
+}
+
+.custom-text-field.full-width input {
+  width: 100%;
+}
